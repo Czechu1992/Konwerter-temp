@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(93, 22, 22, 0.746);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%); */
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+
+.underline {
+    margin: 0 auto 15px;
+    width: 100px;
+    height: 2px;
+    background-color: #3682B3;
+}
+
+/* TOP */
+
+.top {
+    text-align: center;
+}
+
+.top h1 {
+    font-size: 100px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.top p {
+    font-size: 20px;
+}
+
+.top p span {
+    font-size: 30px;
+    font-family: 'Architects Daughter', cursive;
+    font-weight: bold;
+}
+
+.top .underline {
+    margin: 0 auto 15px;
+    width: 100px;
+    height: 2px;
+    background-color: #3682B3;
+}
+
+/* MID */
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.panel {
+    height: 60px;
+    margin: 20px 10px;
+    padding: 10px 20px;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+.opacity {
+    opacity: 0.85;
+}
+
+.error {
+    border: 1px solid rgb(255, 252, 51);
+    background-color: rgba(221, 219, 87, 0.4);
+}
+
+button {
+    cursor: pointer;
+}
+
+.convert {
+    transition: background-color .3s;
+    background-color: rgb(64, 181, 255);
+}
+
+.convert:hover {
+    background-color: rgb(44, 150, 229);
+}
+
+.convert i {
+    transition: transform .3s;
+}
+
+.convert:hover > i {
+    transform: rotateY(180deg);
+} 
+
+.reset {
+    background-color: rgb(255, 89, 89);
+    transition: background-color .3s;
+}
+
+.reset:hover {
+    background-color: rgb(235, 60, 65);
+}
+
+.reset i {
+    transition: transform .3s;
+}
+
+.reset:hover > i {
+    transform: rotateY(180deg);
+}
+
+
+
+/* DOWN */
+
+.resoults {
+    visibility: hidden;
+    text-align: center;
+}
+
+.resoult h2 {
+    text-align: center;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 35px;
+}
+
+.resoult {
+
+    text-align: left;
+    font-size: 30px;
+}
+
+.show {
+    visibility: visible;
+}
+
+strong {
+    border-bottom: 2px solid rgb(54, 130, 179);
+}
+
+.resoult p {
+    margin-bottom: 10px;
+    /* border-bottom: 1px solid rgb(54, 130, 179); */
+}
+
+
+
+
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: black;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: black;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: black;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: black;
+}

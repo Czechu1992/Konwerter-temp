@@ -3,7 +3,7 @@ const unit = document.querySelector('#unit');
 const roundSelect = document.querySelector('#round');
 const convertBtn = document.querySelector('.convert');
 const resetBtn = document.querySelector('.reset');
-const resoult = document.querySelector('.resoult');
+const resoult = document.querySelector('.resoults');
 
 const kRosoult = document.querySelector('.kRosoult');
 const CRosoult = document.querySelector('.CRosoult');
@@ -30,37 +30,31 @@ const checkForm = () => {
 }
 
 const convert = (inputValue, unitValue) => {
-
+    resoult.classList.add('show', 'animate__animated', 'animate__fadeIn');
     if (unitValue === 'kelvin') {
         k = parseFloat(inputValue);
         c = k - 273.15;
         f = (k * 1.8) - 459.67;
-        
-        kRosoult.innerText = round(k);
-        CRosoult.innerText = round(c);
-        FRosoult.innerText = round(f);
-        resoult.classList.add('show', 'animate__animated', 'animate__fadeIn');
+        resoultWriter(k, c, f);
 
     } else if (unitValue === 'celsius') {
         c = parseFloat(inputValue);
         k = c + 273.15;
         f = (c * 1.8) + 32;
-        
-        kRosoult.innerText = round(k);
-        CRosoult.innerText = round(c);
-        FRosoult.innerText = round(f);
-        resoult.classList.add('show', 'animate__animated', 'animate__fadeIn');
+        resoultWriter(k, c, f);
 
     } else if (unitValue === 'fahrenheit') {
         f = parseFloat(inputValue);
         c = (f - 32) / 1.8;
         k = (f + 459.67) * (5 / 9);
-
-        kRosoult.innerText = round(k);;
-        CRosoult.innerText = round(c);;
-        FRosoult.innerText = round(f);;
-        resoult.classList.add('show', 'animate__animated', 'animate__fadeIn');
+        resoultWriter(k, c, f);
     }
+}
+
+const resoultWriter = (k, c, f) => {
+    kRosoult.innerText = round(k);
+    CRosoult.innerText = round(c);
+    FRosoult.innerText = round(f);
 }
 
 const clearAll = () => {

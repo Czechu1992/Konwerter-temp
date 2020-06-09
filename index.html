@@ -8,6 +8,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat:wght@400;700&display=swap"
         rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/63f606fc6f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <link rel="stylesheet" href="css/style.css">
@@ -16,7 +17,7 @@
 <body>
     <div class="wrapper">
         <div class="top">
-            <h1 class="animate__animated animate__fadeInDown">Konwerter</h1>
+            <h1 class="animate__animated animate__fadeInDown">Konwerter </h1>
             <p class="animate__animated animate__fadeInLeftBig">jednostek <span>temperatury</span></p>
             <div class="underline"></div>
         </div>
@@ -30,8 +31,10 @@
                 <option value="celsius">Celsjusz [°C]</option>
                 <option value="fahrenheit">Fahrenheit [°F]</option>
             </select>
-            <select class="panel opacity" name="" id="round">
-                <option value="0" selected disabled>- 0,00 -</option>
+            <button class="convert panel"><i class="fas fa-exchange-alt"></i></button>
+            <button class="reset panel"><i class="fas fa-broom"></i></button>
+            <select class="panel" name="" id="round">
+                <option value="0" selected disabled>&#xf4f3</option>
                 <option value="1">0</option>
                 <option value="2">1</option>
                 <option value="3">2</option>
@@ -44,8 +47,6 @@
                 <option value="10">9</option>
                 <option value="11">10</option>
             </select>
-            <button class="convert panel"><i class="fas fa-exchange-alt"></i></button>
-            <button class="reset panel"><i class="fas fa-broom"></i></button>
         </div>
 
         <div class="resoults">
